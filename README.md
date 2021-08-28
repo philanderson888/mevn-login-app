@@ -11,6 +11,7 @@
   - [register users](#register-users)
   - [incomplete tutorial](#incomplete-tutorial)
   - [registering a user](#registering-a-user)
+  - [deploying to netlify](#deploying-to-netlify)
 
 
 ## introduction
@@ -388,4 +389,20 @@ also if i register a new user it's also being stored in the database
 */
 ```
 
+
+## deploying to netlify
+
+to deploy this app to netlify we can create a separate `github` repository just for this application and push the application to the `github repository` as seen for example at my example here https://github.com/philanderson888/mevn-login-app
+
+The `netlify build settings` are
+
+- change `yarn serve` which is used locally (127.0.0.1) to `yarn build` and in the `publish directory` use `/dist`
+
+if you make these changes the site should deploy and your site should now be available on a public internet link provided by `netlify` such as my example here https://flamboyant-banach-405870.netlify.app/
+
+So that means our site is deployed!!!
+
+To make the databases work we must change our `api` url from that of our `localhost` to one being also deployed on the internet.
+
+... more to follow after https://github.com/philanderson888/mevn-login-api is deployed to `netlify`
 
