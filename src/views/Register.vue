@@ -33,6 +33,10 @@ export default {
   methods: {
     async register() {
       const { name, password } = this.form;
+      const headers = {
+        'Content-Type': 'application/json',
+        'Access-Control-Allow-Origin': '*'
+      }
       if (!name || !password) {
         alert("Username and password are required");
       }
@@ -40,6 +44,8 @@ export default {
         await axios.post(`${APIURL}/users/register`, {
           name,
           password,
+        }, {
+          headers
         });
         alert("Registration successful");
       } catch (error) {
