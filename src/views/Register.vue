@@ -35,7 +35,8 @@ export default {
       const { name, password } = this.form;
       const headers = {
         'Content-Type': 'application/json',
-        'Access-Control-Allow-Origin': '*'
+        'Access-Control-Allow-Origin': '*', 
+        'Access-Control-Allow-Methods': ['GET','PUT','POST','DELETE','OPTIONS']
       }
       if (!name || !password) {
         alert("Username and password are required");
