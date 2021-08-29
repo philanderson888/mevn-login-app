@@ -2,8 +2,6 @@
 
 const MongoClient = require("mongodb").MongoClient;
 
-const connection = createConnection(`mongodb+srv://${process.env.VUE_APP_MONGO_DB_USERNAME}:${process.env.VUE_APP_MONGO_DB_PASSWORD}@cluster0.iilta.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`,{ useNewUrlParser: true, useUnifiedTopology: true,useFindAndModify:false });
-
 const MONGODB_URI = `mongodb+srv://${process.env.VUE_APP_MONGO_DB_USERNAME}:${process.env.VUE_APP_MONGO_DB_PASSWORD}@cluster0.iilta.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
 const DB_NAME = 'myFirstDatabase';
