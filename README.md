@@ -12,6 +12,7 @@
   - [incomplete tutorial](#incomplete-tutorial)
   - [registering a user](#registering-a-user)
   - [deploying to netlify](#deploying-to-netlify)
+    - [serverless functions](#serverless-functions)
 
 
 ## introduction
@@ -405,4 +406,11 @@ So that means our site is deployed!!!
 To make the databases work we must change our `api` url from that of our `localhost` to one being also deployed on the internet.
 
 ... more to follow after https://github.com/philanderson888/mevn-login-api is deployed to `netlify`
+
+
+### serverless functions
+
+https://explorers.netlify.com/learn/up-and-running-with-serverless-functions/project-setup-with-serverless-functions
+
+Go to https://github.com/netlify/explorers-up-and-running-with-serverless-functions/ and click `use this template` (make sure you are logged in to Github first!). 
 
