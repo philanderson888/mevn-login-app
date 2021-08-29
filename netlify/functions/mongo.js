@@ -4,6 +4,8 @@ const MongoClient = require("mongodb").MongoClient;
 
 const MONGODB_URI = `mongodb+srv://${process.env.VUE_APP_MONGO_DB_USERNAME}:${process.env.VUE_APP_MONGO_DB_PASSWORD}@cluster0.iilta.mongodb.net/myFirstDatabase?retryWrites=true&w=majority`;
 
+console.log(`MONGODB_URI = ${MONGODB_URI}`)
+
 const DB_NAME = 'myFirstDatabase';
 
 
