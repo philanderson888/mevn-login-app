@@ -414,3 +414,23 @@ https://explorers.netlify.com/learn/up-and-running-with-serverless-functions/pro
 
 Go to https://github.com/netlify/explorers-up-and-running-with-serverless-functions/ and click `use this template` (make sure you are logged in to Github first!). 
 
+To create a `serverless function` simply add to the root of your app a `\netlify\functions` folder and in it put a function such as `what-is-the-time.js`
+
+
+```js
+// ./lambda_functions/what_is_the_time.js
+
+// This `handler` is what is called when your Lambda
+// function is triggered. For more full specs on it see
+// https://docs.aws.amazon.com/lambda/latest/dg/nodejs-handler.html
+module.exports.handler = async (event, context) => {
+    const unixTime = Math.floor(Date.now() / 1000);
+    return {
+      statusCode: 200,
+      body: `The Unix time is ${unixTime}`,
+    };
+  };
+```
+
+Now on your deployed site go to `/.netlify/functions/what-is-the-time` and you will find the output desired
+
