@@ -22,7 +22,9 @@
 
 <script>
 import axios from "axios";
-import { APIURL } from "../constants.ts";
+import { APIURL, API_URL_POST_USER } from "../constants.ts";
+
+
 
 export default {
   data() {
@@ -42,7 +44,7 @@ export default {
         alert("Username and password are required");
       }
       try {
-        await axios.post(`${APIURL}/users/register`, {
+        await axios.post(`${API_URL_POST_USER}/users/register`, {
           name,
           password,
         }, {
