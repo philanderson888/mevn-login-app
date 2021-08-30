@@ -6,6 +6,8 @@ console.log(`MONGODB_URI = ${MONGODB_URI}`)
 
 const DB_NAME = 'myFirstDatabase';
 
+let cachedDb = null;
+
 const connectToDatabase = async (uri) => {
   // we can cache the access to our database to speed things up a bit
   // (this is the only thing that is safe to cache here)
