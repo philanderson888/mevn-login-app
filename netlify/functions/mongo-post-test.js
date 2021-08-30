@@ -24,14 +24,14 @@ const connectToDatabase = async (uri) => {
 
 
 const queryDatabase = async (db) => {
-  const users = await db.collection("users").find({}).toArray();
+  const testData = await db.collection("test").find({}).toArray();
 
   return {
     statusCode: 200,
     headers: {
       "Content-Type": "application/json",
     },
-    body: JSON.stringify(users),
+    body: JSON.stringify(testData),
   };
 };
 
@@ -42,7 +42,6 @@ const pushToDatabase = async (db, data) => {
       number: data.number,
     };
   
-    return { "hello":"hello" }
     if (mongoData.name && mongoData.number) {
       await db.collection("test").insertMany([data]);
       return { statusCode: 201 };
