@@ -434,3 +434,14 @@ module.exports.handler = async (event, context) => {
 
 Now on your deployed site go to `/.netlify/functions/what-is-the-time` and you will find the output desired
 
+Now follow this https://stephencook.dev/blog/netlify-mongodb/ tutorial
+
+On your local machine in the root of your application directory type
+
+```js
+yarn add mongodb
+```
+and push the changes to Github
+
+
+
